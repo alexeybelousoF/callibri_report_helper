@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "report_bot",
+  "version": "1.0.0",
+  "permissions": [
+          "storage"
+        ],
+  "background": {
+
+    "scripts": ["background.js"]
+
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js", "JSONtoCSV.js", "json2csv-lib.js"]
+    }
+  ],
+  "browser_action": {
+  },
+  "icons":{
+    
+  }
+
+}
